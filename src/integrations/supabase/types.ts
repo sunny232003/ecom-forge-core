@@ -148,7 +148,7 @@ export type Database = {
           stripe_session_id: string | null
           total_amount: number
           updated_at: string
-          user_id: string | null
+          user_id: string
         }
         Insert: {
           billing_address: Json
@@ -162,7 +162,7 @@ export type Database = {
           stripe_session_id?: string | null
           total_amount: number
           updated_at?: string
-          user_id?: string | null
+          user_id: string
         }
         Update: {
           billing_address?: Json
@@ -176,7 +176,7 @@ export type Database = {
           stripe_session_id?: string | null
           total_amount?: number
           updated_at?: string
-          user_id?: string | null
+          user_id?: string
         }
         Relationships: []
       }
@@ -280,6 +280,10 @@ export type Database = {
       generate_order_number: {
         Args: Record<PropertyKey, never>
         Returns: string
+      }
+      is_admin: {
+        Args: Record<PropertyKey, never>
+        Returns: boolean
       }
     }
     Enums: {
